@@ -1,0 +1,70 @@
+ <style>
+body{
+    font-family:Arial;
+    background:#f4f4f4;
+}
+
+h1{
+    text-align:center;
+}
+
+table{
+    width:90%;
+    margin:auto;
+    border-collapse:collapse;
+    background:white;
+}
+
+th{
+    background:#007bff;
+    color:white;
+}
+
+th,td{
+    padding:12px;
+    border:1px solid #ddd;
+    text-align:center;
+}
+
+a{
+    text-decoration:none;
+}
+</style>
+
+<h1>All Courses</h1>
+
+<center>
+<a href="/insertdata">Add New Course</a>
+</center>
+
+<br>
+
+<table>
+<tr>
+<th>Course</th>
+<th>Trainer</th>
+<th>Duration</th>
+<th>Fees</th>
+<th>Mode</th>
+<th>Action</th>
+</tr>
+
+<% allcourses.forEach((course)=>{ %>
+
+<tr>
+<td><%= course.courseName %></td>
+<td><%= course.trainerName %></td>
+<td><%= course.duration %></td>
+<td><%= course.fees %></td>
+<td><%= course.mode %></td>
+
+<td>
+<a href="/edit/<%= course._id %>">Edit</a> |
+<a href="/delete/<%= course._id %>">Delete</a>
+</td>
+
+</tr>
+
+<% }) %>
+
+</table>

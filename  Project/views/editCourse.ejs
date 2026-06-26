@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Course</title>
+</head>
+<body>
+
+    <h1>Edit Course</h1>
+
+    <form action="/update/<%= data._id %>" method="POST">
+
+        <input
+            type="text"
+            name="courseName"
+            value="<%= data.courseName %>"
+            required>
+
+        <br><br>
+
+        <input
+            type="text"
+            name="trainerName"
+            value="<%= data.trainerName %>"
+            required>
+
+        <br><br>
+
+        <input
+            type="text"
+            name="duration"
+            value="<%= data.duration %>"
+            required>
+
+        <br><br>
+
+        <input
+            type="number"
+            name="fees"
+            value="<%= data.fees %>"
+            required>
+
+        <br><br>
+
+        <select name="mode">
+
+            <option value="Online"
+            <%= data.mode === 'Online' ? 'selected' : '' %>>
+            Online
+            </option>
+
+            <option value="Offline"
+            <%= data.mode === 'Offline' ? 'selected' : '' %>>
+            Offline
+            </option>
+
+        </select>
+
+        <br><br>
+
+        <button type="submit">
+            Update Course
+        </button>
+
+    </form>
+
+    <br>
+
+    <a href="/courses">Back to Courses</a>
+
+</body>
+</html>

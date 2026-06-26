@@ -1,0 +1,50 @@
+ <style>
+body{
+    font-family:Arial;
+    background:#f4f4f4;
+}
+
+.container{
+    width:400px;
+    margin:50px auto;
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 0 10px gray;
+}
+
+input,select{
+    width:100%;
+    padding:10px;
+    margin:8px 0;
+}
+
+button{
+    width:100%;
+    padding:10px;
+    background:green;
+    color:white;
+    border:none;
+    border-radius:5px;
+}
+</style>
+
+<div class="container">
+<h2>Add Course</h2>
+
+<form action="/createdata" method="POST">
+
+<input type="text" name="courseName" placeholder="Course Name">
+<input type="text" name="trainerName" placeholder="Trainer Name">
+<input type="text" name="duration" placeholder="Duration">
+<input type="number" name="fees" placeholder="Fees">
+
+<select name="mode">
+<option>Online</option>
+<option>Offline</option>
+</select>
+
+<button>Add Course</button>
+
+</form>
+</div>

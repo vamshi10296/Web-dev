@@ -1,0 +1,209 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Management System</title>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+    background:linear-gradient(-45deg,
+    #4158D0,
+    #C850C0,
+    #FFCC70,
+    #00DBDE);
+    background-size:400% 400%;
+    animation:gradientBG 12s ease infinite;
+}
+
+@keyframes gradientBG{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+/* Floating Circles */
+
+.circle{
+    position:absolute;
+    border-radius:50%;
+    background:rgba(255,255,255,0.15);
+    animation:float 10s infinite linear;
+}
+
+.circle:nth-child(1){
+    width:180px;
+    height:180px;
+    top:10%;
+    left:10%;
+}
+
+.circle:nth-child(2){
+    width:120px;
+    height:120px;
+    bottom:15%;
+    right:12%;
+}
+
+.circle:nth-child(3){
+    width:80px;
+    height:80px;
+    top:20%;
+    right:20%;
+}
+
+@keyframes float{
+    0%{
+        transform:translateY(0px);
+    }
+    50%{
+        transform:translateY(-30px);
+    }
+    100%{
+        transform:translateY(0px);
+    }
+}
+
+/* Glass Card */
+
+.container{
+    width:450px;
+    padding:45px;
+    text-align:center;
+
+    background:rgba(255,255,255,0.12);
+    backdrop-filter:blur(20px);
+    border:1px solid rgba(255,255,255,0.25);
+
+    border-radius:25px;
+
+    box-shadow:
+    0 8px 32px rgba(0,0,0,0.2),
+    inset 0 0 10px rgba(255,255,255,0.1);
+
+    position:relative;
+    z-index:10;
+}
+
+.logo{
+    font-size:70px;
+    color:white;
+    margin-bottom:10px;
+}
+
+h1{
+    color:white;
+    font-size:2rem;
+    margin-bottom:10px;
+}
+
+p{
+    color:#f0f0f0;
+    margin-bottom:35px;
+}
+
+/* Buttons */
+
+.btn{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:12px;
+
+    text-decoration:none;
+    color:white;
+
+    padding:16px;
+    margin:15px 0;
+
+    border-radius:50px;
+    font-size:17px;
+    font-weight:600;
+
+    transition:.4s ease;
+}
+
+.students{
+    background:linear-gradient(
+    135deg,
+    #ff416c,
+    #ff4b2b);
+}
+
+.add{
+    background:linear-gradient(
+    135deg,
+    #00c853,
+    #00e676);
+}
+
+.btn:hover{
+    transform:translateY(-5px) scale(1.04);
+
+    box-shadow:
+    0 15px 25px rgba(0,0,0,0.25),
+    0 0 25px rgba(255,255,255,0.3);
+}
+
+.footer{
+    margin-top:25px;
+    color:#eee;
+    font-size:13px;
+    letter-spacing:1px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+
+<div class="container">
+
+    <div class="logo">
+        <i class="fas fa-graduation-cap"></i>
+    </div>
+
+    <h1>Student Management</h1>
+
+    <p>Manage Student Records With Ease</p>
+
+    <a href="http://localhost:3000/student" class="btn students">
+        <i class="fas fa-users"></i>
+        View All Students
+    </a>
+
+    <a href="http://localhost:3000/insertdata" class="btn add">
+        <i class="fas fa-user-plus"></i>
+        Add New Student
+    </a>
+
+    <div class="footer">
+        © 2026 Student Portal Dashboard
+    </div>
+
+</div>
+
+</body>
+</html>

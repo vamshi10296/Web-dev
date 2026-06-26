@@ -1,0 +1,1 @@
+JavaScript is a high-level, dynamic programming language used to add interactivity, logic, and functional behavior to websites. It works alongside HTML (which structures web content) and CSS (which handles design and layout).
